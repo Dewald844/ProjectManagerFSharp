@@ -1,5 +1,5 @@
 # ProjectManagerFSharp
-Project Management system 
+Project Management system
 
--> Imploying Domain Driven Design
--> Functional Programming rather than Object Oriented programming
+-> Imploying `Domain Driven Design`
+-> `Functional Programming` rather than `Object Oriented programming`
