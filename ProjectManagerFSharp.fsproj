@@ -1,12 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
-    <Compile Include="Program.fs" />
+    <Compile Include="Pms.Domain\Domain.Person.fs" />
+    <Compile Include="Pms.Domain\Domain.Project.fs" />
+    <Compile Include="Pms.Domain/Program.fs" />
   </ItemGroup>
-
 </Project>

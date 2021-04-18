@@ -90,25 +90,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\Rav\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\DewaldProjects\\ProjectManagerFSharp\\ProjectManagerFSharp.fsproj",
+      "projectUniqueName": "C:\\Users\\Rav\\DewaldProjects\\ProjectManagerFSharp\\ProjectManagerFSharp.fsproj",
       "projectName": "ProjectManagerFSharp",
-      "projectPath": "C:\\Users\\User\\DewaldProjects\\ProjectManagerFSharp\\ProjectManagerFSharp.fsproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\DewaldProjects\\ProjectManagerFSharp\\obj\\",
+      "projectPath": "C:\\Users\\Rav\\DewaldProjects\\ProjectManagerFSharp\\ProjectManagerFSharp.fsproj",
+      "packagesPath": "C:\\Users\\Rav\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rav\\DewaldProjects\\ProjectManagerFSharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Rav\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Users\\User\\AgricoProjects\\Workspace\\CustomNuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -143,7 +142,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
