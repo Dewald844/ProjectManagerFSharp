@@ -6,6 +6,7 @@
   <ItemGroup>
     <Compile Include="Pms.Domain\Domain.Person.fs" />
     <Compile Include="Pms.Domain\Domain.Project.fs" />
+    <Compile Include="Pms.Domain\Domain.TestData.fs" />
     <Compile Include="Pms.Domain/Program.fs" />
   </ItemGroup>
 </Project>
