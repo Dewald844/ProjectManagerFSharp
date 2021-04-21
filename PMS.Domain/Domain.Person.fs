@@ -17,21 +17,21 @@ module Person =
   let createPerson (persontype: string)(name : string) (email : string)(address : string) (phoneNum : int) : Person =
     match persontype with
     | "Customer" ->
-        Person.Customer {
+        Customer {
           Details.Name = name
           Details.Email = email
           Details.Address = address
           Details.PhoneNumber = phoneNum
         }
     | "Architect" ->
-        Person.Architect {
+        Architect {
           Details.Name = name
           Details.Email = email
           Details.Address = address
           Details.PhoneNumber = phoneNum
         }
     | "Contractor" ->
-        Person.Contractor {
+        Contractor {
           Details.Name = name
           Details.Email = email
           Details.Address = address

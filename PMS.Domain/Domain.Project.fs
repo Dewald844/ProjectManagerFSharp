@@ -11,7 +11,7 @@ type ProjectDetails = {
   ERFNumber  : int
   ProjectFee : float
   AmountPaid : float
-  DueDate    : DateTime
+  DueDate    : DateTimeOffset
   Customer   : Person
   Architect  : Person
   Contractor : Person
@@ -25,10 +25,10 @@ type Project =
 
 module Project =
 
-  let createProject (projtype : string)(id : int) (name : string)(address : string) (erf: int)(fee: float) (paid: float)(date: DateTime) (cust: Domain.Person)(arch: Domain.Person)(cont : Domain.Person) : Project =
+  let createProject (projtype : string)(id : int) (name : string)(address : string) (erf: int)(fee: float) (paid: float)(date: DateTimeOffset) (cust: Domain.Person)(arch: Domain.Person)(cont : Domain.Person) : Project =
     match projtype with
       | "Apartment" ->
-          Project.Apartment {
+          Apartment {
             ProjectDetails.Id = id
             ProjectDetails.Name = name
             ProjectDetails.Address = address
@@ -42,7 +42,7 @@ module Project =
             ProjectDetails.Finalized = false
           }
       | "Store" ->
-          Project.Store {
+          Store {
             ProjectDetails.Id = id
             ProjectDetails.Name = name
             ProjectDetails.Address = address
@@ -56,7 +56,7 @@ module Project =
             ProjectDetails.Finalized = false
           }
       | "Building" ->
-          Project.Building {
+          Building {
             ProjectDetails.Id = id
             ProjectDetails.Name = name
             ProjectDetails.Address = address
