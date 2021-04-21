@@ -15,6 +15,7 @@ type ProjectDetails = {
   Customer   : Person
   Architect  : Person
   Contractor : Person
+  Finalized  : bool
 }
 
 type Project =
@@ -38,6 +39,7 @@ module Project =
             ProjectDetails.Architect = arch
             ProjectDetails.Customer = cust
             ProjectDetails.Contractor = cont
+            ProjectDetails.Finalized = false
           }
       | "Store" ->
           Project.Store {
@@ -51,6 +53,7 @@ module Project =
             ProjectDetails.Architect = arch
             ProjectDetails.Customer = cust
             ProjectDetails.Contractor = cont
+            ProjectDetails.Finalized = false
           }
       | "Building" ->
           Project.Building {
@@ -64,4 +67,5 @@ module Project =
             ProjectDetails.Architect = arch
             ProjectDetails.Customer = cust
             ProjectDetails.Contractor = cont
+            ProjectDetails.Finalized = false
           }
