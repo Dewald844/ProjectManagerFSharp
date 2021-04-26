@@ -5,5 +5,9 @@ open Domain.Person
 open Domain.Project
 open Domain.Testdata
 
-printfn "First %s" (Person.Customer.cust1.ToString())
-printfn "First %s" (Project.Store.storeProject.ToString())
+
+let detailL =  Project.Store.storeProject
+               |> getProjectDetails
+
+printfn "%A" detailL
+

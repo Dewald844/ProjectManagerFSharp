@@ -48,4 +48,7 @@ module Testdata =
       let arch = Person.Architect.arch1
       let cont = Person.Contractor.cont1
 
-      let storeProject = createProject projectType id name address erfNum fee amountpaid duedate cust arch cont
+      let storeProject = createProject (projectType) (id) (name) (address) erfNum fee amountpaid duedate cust arch cont
+      let storeDetails = 
+          storeProject 
+          |> getProjectDetails
