@@ -72,27 +72,30 @@ module Project =
 
   let getProjectDetails (project : Project) = 
     match project with 
-    | Apartment d -> [d.Id.ToString()
-                      d.Name.ToString()
-                      d.Address.ToString() 
-                      d.ERFNumber.ToString()
-                      d.ProjectFee.ToString() 
-                      d.AmountPaid.ToString()
-                      d.DueDate.ToString()
-                      d.Finalized.ToString()]
-    | Building  d -> [d.Id.ToString() 
-                      d.Name.ToString()
-                      d.Address.ToString() 
-                      d.ERFNumber.ToString()
-                      d.ProjectFee.ToString() 
-                      d.AmountPaid.ToString()
-                      d.DueDate.ToString()
-                      d.Finalized.ToString()] 
-    | Store     d -> [d.Id.ToString() 
-                      d.Name.ToString()
-                      d.Address.ToString() 
-                      d.ERFNumber.ToString()
-                      d.ProjectFee.ToString() 
-                      d.AmountPaid.ToString()
-                      d.DueDate.ToString()
-                      d.Finalized.ToString()]
+    | Apartment d -> 
+      [d.Id.ToString()
+       d.Name.ToString()
+       d.Address.ToString() 
+       d.ERFNumber.ToString()
+       d.ProjectFee.ToString() 
+       d.AmountPaid.ToString()
+       d.DueDate.ToString()
+       d.Finalized.ToString()]
+    | Building  d -> 
+      [d.Id.ToString() 
+       d.Name.ToString()
+       d.Address.ToString() 
+       d.ERFNumber.ToString()
+       d.ProjectFee.ToString() 
+       d.AmountPaid.ToString()
+       d.DueDate.ToString()
+       d.Finalized.ToString()] 
+    | Store     d -> 
+      [d.Id.ToString() 
+       d.Name.ToString()
+       d.Address.ToString() 
+       d.ERFNumber.ToString()
+       d.ProjectFee.ToString() 
+       d.AmountPaid.ToString()
+       d.DueDate.ToString()
+       d.Finalized.ToString()]
