@@ -52,3 +52,24 @@ module Person =
      | Architect -> PersonRole.Architect
      | Contractor -> PersonRole.Contractor
      | Customer -> PersonRole.Customer
+
+  let roleToString (role : PersonRole) =
+    match role with
+    | Architect  -> "Architect"
+    | Contractor -> "Contractor"
+    | Customer   -> "Customer"
+
+  let isArchitect (person : Person) =
+    match person.Role with
+    | Architect -> true
+    | _ -> false
+
+  let isContractor (person : Person) =
+    match person.Role with
+    | Contractor -> true
+    | _ -> false
+
+  let isCustomer (person : Person) =
+    match person.Role with
+    | Customer -> true
+    | _ -> false
