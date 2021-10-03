@@ -8,8 +8,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="Domain.Types.fs" />
         <Compile Include="Domain.Person.fs" />
         <Compile Include="Domain.Project.fs" />
+        <Compile Include="Domain.Console.fs" />
     </ItemGroup>
 
 </Project>

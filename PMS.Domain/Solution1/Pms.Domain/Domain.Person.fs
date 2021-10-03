@@ -1,75 +1,61 @@
 namespace Domain
 
-type PersonName = Name of string
-type TelephoneNumber = Number of int
-type EmailAddress = Email of string
-type PhysicalAddress = Address of string
+open System.Net.NetworkInformation
+open Types
+open Types.Helpers
 
-type PersonRole =
-  | Architect
-  | Contractor
-  | Customer
-
-type Person ={
-  Name    : PersonName
-  Number  : TelephoneNumber
-  Email   : EmailAddress
-  Address : PhysicalAddress
-  Role    : PersonRole
-}
+[<RequireQualifiedAccess>]
 
 module Person =
 
+  type EmailAddress    = Email of string
+
+  type ContactDetails = {
+    TelephoneNumber : TelephoneNumber
+    EmailAddress    : EmailAddress
+    PhysicalAddress : PhysicalAddress
+  }
+  type PersonDetails ={
+    PersonId       : Int99
+    Name           : FirstName * LastName
+    ContactDetails : ContactDetails
+  }
+  type Person =
+   | Architect of PersonDetails
+   | Contractor of PersonDetails
+   | Customer  of PersonDetails
+
+
   let createPerson
-      (name : string)
-      (number : int)
-      (email : string)
-      (address : string)
-      (role : PersonRole) =
-    {
-      Name    = name    |> PersonName.Name
-      Number  = number  |> TelephoneNumber.Number
-      Email   = email   |> EmailAddress.Email
-      Address = address |> PhysicalAddress.Address
-      Role    = role
-    }
+    (personType : string) (newId : int)
+    (firstname : string) ( lastName : string)
+    (phoneNumber : int) (email : string)
+    (houseNumber : int) (streetName : string)
+    (cityName : string) : Person =
 
-  let getName (person : Person) =
-    person.Name
+    let address =
+      ((houseNumber |> HouseNumber.createAddressNumber)
+       ,(streetName |> StreetName.createStreetName)
+       ,(cityName   |> City.createCity))
 
-  let getNumber (person : Person) =
-    person.Number
+    let contactDetails =
+      {
+        TelephoneNumber = phoneNumber |> TelephoneNumber.createTelephoneNumber
+        EmailAddress    = email |> EmailAddress.Email
+        PhysicalAddress = address
+      }
 
-  let getEmail (person : Person) =
-    person.Email
+    let details =
+      {
+        PersonId = newId |> Int99.createInt99
+        Name =
+          ((firstname |> FirstName.createFirstName),
+           (lastName |> LastName.createLastName))
+        ContactDetails = contactDetails
+      }
 
-  let getAddress (person : Person) =
-    person.Address
-
-  let getRole (person : Person) =
-     let role = person.Role
-     match role with
-     | Architect -> PersonRole.Architect
-     | Contractor -> PersonRole.Contractor
-     | Customer -> PersonRole.Customer
-
-  let roleToString (role : PersonRole) =
-    match role with
-    | Architect  -> "Architect"
-    | Contractor -> "Contractor"
-    | Customer   -> "Customer"
-
-  let isArchitect (person : Person) =
-    match person.Role with
-    | Architect -> true
-    | _ -> false
-
-  let isContractor (person : Person) =
-    match person.Role with
-    | Contractor -> true
-    | _ -> false
-
-  let isCustomer (person : Person) =
-    match person.Role with
-    | Customer -> true
-    | _ -> false
+    match personType with
+    | "Architect" -> Architect details
+    | "Contractor" -> Contractor details
+    | "Customer"   -> Customer details
+    | _ -> failwith $"Invalid person type input REF {personType}"
