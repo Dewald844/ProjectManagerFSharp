@@ -1,7 +1,6 @@
 ﻿namespace Types
 
 open System
-open Types.Helpers
 
 module Helpers =
 

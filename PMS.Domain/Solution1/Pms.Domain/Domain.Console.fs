@@ -1,4 +1,6 @@
-﻿[<EntryPoint>]
+﻿
+
+[<EntryPoint>]
 let main args =
   match args with
   | [|"-createProject"|] ->

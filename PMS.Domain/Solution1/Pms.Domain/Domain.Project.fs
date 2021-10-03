@@ -26,6 +26,7 @@ type ProjectDetails = {
   IsFinalised      : bool
 }
 type ProjectTeam = Person.Person * Person.Person
+
 type Project = {
   References : ProjectReferences * ProjectTeam
   Details    : ProjectDetails    * ProjectFinance
