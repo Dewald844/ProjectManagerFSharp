@@ -4,8 +4,6 @@ open System.Net.NetworkInformation
 open Types
 open Types.Helpers
 
-[<RequireQualifiedAccess>]
-
 module Person =
 
   type EmailAddress    = Email of string

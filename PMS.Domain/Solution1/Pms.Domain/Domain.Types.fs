@@ -1,6 +1,8 @@
 ﻿namespace Types
 
 open System
+open Types
+open Types.Helpers
 
 module Helpers =
 
@@ -70,6 +72,10 @@ module Helpers =
       then Ok (input |> PositiveFloat.PositiveFloat)
       else Error  $"Input amount is less than zero REF : {input} "
 
+    let getPositiveFloat (x : PositiveFloat) : float =
+      match x with
+      | PositiveFloat output -> output
+
   type TelephoneNumber = TelephoneNumber of Int32
 
   module TelephoneNumber =
@@ -127,6 +133,18 @@ module CashAmount =
     match (input |> PositiveFloat.createPositiveFloatResult) with
     | Ok result -> result |> CashAmount.CashAmount
     | Error s -> failwith $"Invalid Cash amount REF : {input} Message {s} "
+
+  let getCashAmount (x : CashAmount) : float =
+    match x with
+    | CashAmount xFloat -> xFloat |> PositiveFloat.getPositiveFloat
+
+  let addCashAmount (a : CashAmount) (b : CashAmount) : CashAmount =
+    let addition =
+      ( (a |> getCashAmount) + (b |> getCashAmount) )
+
+    addition
+    |> PositiveFloat
+    |> CashAmount.CashAmount
 
 type ERFNumber = ERFNumber of String10
 
