@@ -1,6 +1,5 @@
 namespace Domain
 
-open System.Net.NetworkInformation
 open Types
 open Types.Helpers
 
@@ -18,42 +17,32 @@ module Person =
     Name           : FirstName * LastName
     ContactDetails : ContactDetails
   }
-  type Person =
-   | Architect of PersonDetails
-   | Contractor of PersonDetails
-   | Customer  of PersonDetails
 
+  type PersonType =
+    | Architect
+    | Contractor
+    | Customer
 
-  let createPerson
-    (personType : string) (newId : int)
-    (firstname : string) ( lastName : string)
-    (phoneNumber : int) (email : string)
-    (houseNumber : int) (streetName : string)
-    (cityName : string) : Person =
+  type PersonData =
+    | Architect  of PersonDetails
+    | Contractor of PersonDetails
+    | Customer   of PersonDetails
 
-    let address =
-      ((houseNumber |> HouseNumber.createAddressNumber)
-       ,(streetName |> StreetName.createStreetName)
-       ,(cityName   |> City.createCity))
+  type State =
+    | NonExisting
+    | Existing of PersonData
 
-    let contactDetails =
-      {
-        TelephoneNumber = phoneNumber |> TelephoneNumber.createTelephoneNumber
-        EmailAddress    = email |> EmailAddress.Email
-        PhysicalAddress = address
-      }
+  type UpdateMethod =
+    | UpdateTelephoneNumber of TelephoneNumber
+    | UpdateEmail           of EmailAddress
+    | UpdatePhysicalAddress of PhysicalAddress
 
-    let details =
-      {
-        PersonId = newId |> Int99.createInt99
-        Name =
-          ((firstname |> FirstName.createFirstName),
-           (lastName |> LastName.createLastName))
-        ContactDetails = contactDetails
-      }
+  type Command =
+    | Create of PersonType * PersonDetails
+    | Update of UpdateMethod
 
-    match personType with
-    | "Architect" -> Architect details
-    | "Contractor" -> Contractor details
-    | "Customer"   -> Customer details
-    | _ -> failwith $"Invalid person type input REF {personType}"
+  type SuccessFullEvent =
+    | Created                of State * PersonData
+    | TelephoneNumberUpdated of State * PersonData
+    | EmailUpdated           of State * PersonData
+    | AddressUpdated         of State * PersonData

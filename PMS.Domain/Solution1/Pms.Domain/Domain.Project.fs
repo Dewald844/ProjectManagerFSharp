@@ -1,7 +1,7 @@
 ﻿namespace Domain
 
 open System
-open Domain.Person
+open Domain
 open Types
 open Types.Helpers
 
@@ -14,7 +14,7 @@ type ProjectBuildingType =
 type ProjectReferences = {
   Number           : ProjectNumber
   Address          : PhysicalAddress
-  Customer         : Person
+  Customer         : Person.State
 }
 type ProjectFinance = {
   TotalCost     : CashAmount
@@ -27,7 +27,7 @@ type ProjectDetails = {
   Deadline         : SystemDate
   IsFinalised      : bool
 }
-type ProjectTeam = Person * Person
+type ProjectTeam = Person.State * Person.State
 
 type ProjectData = {
   References : ProjectReferences * ProjectTeam
