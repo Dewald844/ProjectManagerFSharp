@@ -1,6 +1,7 @@
 namespace Domain
 
 open System
+open Domain
 open Types
 open Types.Helpers
 
@@ -116,3 +117,29 @@ module Person =
               Ok (SuccessFullEvent.EmailUpdated <| (personState, newPersonData))
           | NonExisting ->
             Error (FailedEvent.EmailUpdateFailed <| (personState, ($"Can not update an non existing person's Email REF {personState}" |> Exception)))
+        | UpdatePhysicalAddress newAddress ->
+          match personState with
+          | Existing personData ->
+            match personData with
+            | Architect currentData ->
+               let newContactDetails = {currentData.ContactDetails with PhysicalAddress = newAddress}
+               let newData = {currentData with ContactDetails = newContactDetails}
+               let newPersonData = Architect <| newData
+               Ok (SuccessFullEvent.AddressUpdated <| (personState, newPersonData))
+            | Contractor currentData ->
+               let newContactDetails = {currentData.ContactDetails with PhysicalAddress = newAddress}
+               let newData = {currentData with ContactDetails = newContactDetails}
+               let newPersonData = Contractor <| newData
+               Ok (SuccessFullEvent.AddressUpdated <| (personState, newPersonData))
+            | Customer currentData ->
+               let newContactDetails = {currentData.ContactDetails with PhysicalAddress = newAddress}
+               let newData = {currentData with ContactDetails = newContactDetails}
+               let newPersonData = Customer <| newData
+               Ok (SuccessFullEvent.AddressUpdated <| (personState, newPersonData))
+          | NonExisting ->
+            Error (FailedEvent.AddressUpdateFailed <| (personState, ($"Can not update an non existing person's Address REF {personState}" |> Exception)))
+
+
+  module Event =
+
+    let evolveState (event : Event) : PersonData
