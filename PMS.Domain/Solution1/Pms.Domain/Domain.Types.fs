@@ -1,10 +1,10 @@
 ﻿namespace Types
 
 open System
-open Types
-open Types.Helpers
 
 module Helpers =
+
+  let unreachable() = failwith "Invalid state has been reached"
 
   type FirstName = FirstName of string
 
@@ -43,7 +43,7 @@ module Helpers =
     let createInt999Result (input : int) : Result<Int999,string> =
       if (input > 0) && (input < 999)
       then Ok    (input |> Int999.Number)
-      else Error (failwith $"Invalid input foe int999 REF : {input}")
+      else Error (failwith $"Invalid input for int999 REF : {input}")
 
   type String50 = String of string
 
@@ -84,73 +84,71 @@ module Helpers =
       then input |> TelephoneNumber.TelephoneNumber
       else failwith $"Input has more than 10 characters REF {input}"
 
-open Helpers
+  type ProjectId = ProjectId of Int99
 
-type ProjectNumber = ProjectNumber of Int99
+  module ProjectId =
+    let createProjectNumber (input : int) : ProjectId =
 
-module ProjectNumber =
-  let createProjectNumber (input : int) : ProjectNumber =
+        match (input |> Int99.createInt99Result) with
+          | Ok result -> result |> ProjectId.ProjectId
+          | Error s   -> failwith $"Invalid Project number REF : {input} Message {s}"
 
-      match (input |> Int99.createInt99Result) with
-        | Ok result -> result |> ProjectNumber.ProjectNumber
-        | Error s   -> failwith $"Invalid Project number REF : {input} Message {s}"
+  type HouseNumber = HouseNumber of Int999
 
-type HouseNumber = HouseNumber of Int999
+  module HouseNumber =
 
-module HouseNumber =
+    let createAddressNumber (input : int) : HouseNumber =
 
-  let createAddressNumber (input : int) : HouseNumber =
+      match (input |> Int999.createInt999Result) with
+      | Ok result -> result |> HouseNumber.HouseNumber
+      | Error s   -> failwith $"Invalid house number REF : {input} Message {s}"
 
-    match (input |> Int999.createInt999Result) with
-    | Ok result -> result |> HouseNumber.HouseNumber
-    | Error s   -> failwith $"Invalid house number REF : {input} Message {s}"
+  type StreetName = StreetName of String50
 
-type StreetName = StreetName of String50
+  module StreetName =
 
-module StreetName =
+    let createStreetName (input : string) : StreetName =
+      match (input |> String50.createString50Result) with
+      | Ok result -> result |> StreetName.StreetName
+      | Error s   -> failwith $"Invalid street name REF : {input} Message {s}"
 
-  let createStreetName (input : string) : StreetName =
-    match (input |> String50.createString50Result) with
-    | Ok result -> result |> StreetName.StreetName
-    | Error s   -> failwith $"Invalid street name REF : {input} Message {s}"
+  type City = CityName of String50
 
-type City = CityName of String50
+  module City =
 
-module City =
+    let createCity (input : string) : City =
+      match (input |> String50.createString50Result) with
+      | Ok result -> result |> City.CityName
+      | Error s   -> failwith $"Invalid city name REF : {input} Message {s}"
 
-  let createCity (input : string) : City =
-    match (input |> String50.createString50Result) with
-    | Ok result -> result |> City.CityName
-    | Error s   -> failwith $"Invalid city name REF : {input} Message {s}"
+  type PhysicalAddress = HouseNumber * StreetName * City
 
-type PhysicalAddress = HouseNumber * StreetName * City
+  type CashAmount = CashAmount of PositiveFloat
 
-type CashAmount = CashAmount of PositiveFloat
+  module CashAmount =
 
-module CashAmount =
+    let createCashAmount (input : float) : CashAmount =
+      match (input |> PositiveFloat.createPositiveFloatResult) with
+      | Ok result -> result |> CashAmount.CashAmount
+      | Error s -> failwith $"Invalid Cash amount REF : {input} Message {s} "
 
-  let createCashAmount (input : float) : CashAmount =
-    match (input |> PositiveFloat.createPositiveFloatResult) with
-    | Ok result -> result |> CashAmount.CashAmount
-    | Error s -> failwith $"Invalid Cash amount REF : {input} Message {s} "
+    let getCashAmount (x : CashAmount) : float =
+      match x with
+      | CashAmount xFloat -> xFloat |> PositiveFloat.getPositiveFloat
 
-  let getCashAmount (x : CashAmount) : float =
-    match x with
-    | CashAmount xFloat -> xFloat |> PositiveFloat.getPositiveFloat
+    let addCashAmount (a : CashAmount) (b : CashAmount) : CashAmount =
+      let addition =
+        ( (a |> getCashAmount) + (b |> getCashAmount) )
 
-  let addCashAmount (a : CashAmount) (b : CashAmount) : CashAmount =
-    let addition =
-      ( (a |> getCashAmount) + (b |> getCashAmount) )
+      addition
+      |> PositiveFloat
+      |> CashAmount.CashAmount
 
-    addition
-    |> PositiveFloat
-    |> CashAmount.CashAmount
+  type ERFNumber = ERFNumber of String10
 
-type ERFNumber = ERFNumber of String10
+  module ERFNumber =
 
-module ERFNumber =
-
-  let createERFNumber (input : string) : ERFNumber =
-    match (input |> String10.createString10Result) with
-    | Ok result -> result |> ERFNumber.ERFNumber
-    | Error s -> failwith $"Invalid ERF number REF : {input} Message : {s}"
+    let createERFNumber (input : string) : ERFNumber =
+      match (input |> String10.createString10Result) with
+      | Ok result -> result |> ERFNumber.ERFNumber
+      | Error s -> failwith $"Invalid ERF number REF : {input} Message : {s}"

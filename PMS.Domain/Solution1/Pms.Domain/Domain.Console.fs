@@ -1,5 +1,4 @@
 ﻿
-
 [<EntryPoint>]
 let main args =
   match args with
@@ -14,7 +13,7 @@ let main args =
     |        -> Project Cost                             |
     |        -> Estimated Deadline                       |
     |                                                    |
-  <--------------THANK YOU FOR USING PMS------------------>"
+  <--------------THANK YOU FOR USING PMS------------------->"
 
   | _ -> printf "
     Please use one of the following commands

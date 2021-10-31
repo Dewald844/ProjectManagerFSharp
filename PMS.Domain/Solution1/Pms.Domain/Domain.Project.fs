@@ -2,7 +2,6 @@
 
 open System
 open Domain
-open Types
 open Types.Helpers
 
 type ProjectBuildingType =
@@ -12,9 +11,9 @@ type ProjectBuildingType =
   | Warehouse
 
 type ProjectReferences = {
-  Number           : ProjectNumber
-  Address          : PhysicalAddress
-  Customer         : Person.State
+  Number   : ProjectId
+  Address  : PhysicalAddress
+  Customer : Person.State
 }
 type ProjectFinance = {
   TotalCost     : CashAmount
@@ -39,6 +38,7 @@ type State =
   | Finalized of ProjectData
 
 type Project = {ProjectState : State}
+
 type UpdateMethod =
   | ChangeDeadline of DateTime
   | PaymentMade    of CashAmount
@@ -127,6 +127,7 @@ module Command =
 
 
 module Event =
+
   let evolveEvent (event: Event) : Project =
     match event with
     | Ok successFullEvent ->

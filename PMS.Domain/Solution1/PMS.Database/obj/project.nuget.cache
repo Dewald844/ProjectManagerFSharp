@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "m410jfGToVbRnkNPIlAwt5Rl134WLlKkzLbjFVyqF/crhoLls1BjDlWqQvUxmIQaXZU7povsx356U9m3p5t+hQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\User\\DewaldProjects\\ProjectManagerFSharp\\PMS.Domain\\Solution1\\PMS.Database\\PMS.Database.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
