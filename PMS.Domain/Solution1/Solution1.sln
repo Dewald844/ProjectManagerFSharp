@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Pms.Domain", "Pms.Domain\Pms.Domain.fsproj", "{8CB95CCC-C9DD-4F05-82D4-22F1EDD4B88F}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PMS.01.Domain", "PMS.01.Domain\PMS.01.Domain.fsproj", "{8CB95CCC-C9DD-4F05-82D4-22F1EDD4B88F}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PMS.Database", "PMS.Database\PMS.Database.fsproj", "{DA42F6F7-7F8C-45EB-84D7-B8694EA34F5D}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PMS.02.Database", "PMS.02.Database\PMS.02.Database.fsproj", "{DA42F6F7-7F8C-45EB-84D7-B8694EA34F5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

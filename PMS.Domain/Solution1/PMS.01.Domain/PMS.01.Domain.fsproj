@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <WarnOn>3390;$(WarnOn)</WarnOn>
+        <RootNamespace>Pms.person.fs</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Domain.Types.fs" />
+        <Compile Include="Domain.Person.fs" />
+        <Compile Include="Domain.Project.fs" />
+    </ItemGroup>
+
+</Project>
