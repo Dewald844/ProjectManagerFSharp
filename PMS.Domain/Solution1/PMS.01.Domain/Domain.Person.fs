@@ -53,8 +53,7 @@ module Person =
     | AddressUpdateFailed         of State * Exception
 
   type Event = Result<SuccessFullEvent,FailedEvent>
-
-
+  
   module Command =
 
     let interpretCommand (state : State) (command :  Command) : Event =
@@ -91,7 +90,6 @@ module Person =
             Ok ( SuccessFullEvent.AddressUpdated <| (state , newPersonDetails))
           | NonExisting ->
             Error (AddressUpdateFailed <| (state, Exception $"Cannot update non existing person address REF : {state}"))
-
 
   module Event =
 

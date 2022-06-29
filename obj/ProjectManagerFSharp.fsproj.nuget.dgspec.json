@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rav\\DewaldProjects\\ProjectManagerFSharp\\ProjectManagerFSharp.fsproj": {}
+    "C:\\Users\\Dewald Haasbroek\\TailwindSafeStack\\ProjectManagerFSharp\\ProjectManagerFSharp.fsproj": {}
   },
   "projects": {
-    "C:\\Users\\Rav\\DewaldProjects\\ProjectManagerFSharp\\ProjectManagerFSharp.fsproj": {
+    "C:\\Users\\Dewald Haasbroek\\TailwindSafeStack\\ProjectManagerFSharp\\ProjectManagerFSharp.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rav\\DewaldProjects\\ProjectManagerFSharp\\ProjectManagerFSharp.fsproj",
+        "projectUniqueName": "C:\\Users\\Dewald Haasbroek\\TailwindSafeStack\\ProjectManagerFSharp\\ProjectManagerFSharp.fsproj",
         "projectName": "ProjectManagerFSharp",
-        "projectPath": "C:\\Users\\Rav\\DewaldProjects\\ProjectManagerFSharp\\ProjectManagerFSharp.fsproj",
-        "packagesPath": "C:\\Users\\Rav\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rav\\DewaldProjects\\ProjectManagerFSharp\\obj\\",
+        "projectPath": "C:\\Users\\Dewald Haasbroek\\TailwindSafeStack\\ProjectManagerFSharp\\ProjectManagerFSharp.fsproj",
+        "packagesPath": "C:\\Users\\Dewald Haasbroek\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dewald Haasbroek\\TailwindSafeStack\\ProjectManagerFSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rav\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Dewald Haasbroek\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -34,8 +34,9 @@
           "targetAlias": "net5.0",
           "dependencies": {
             "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[5.0.0, )",
+              "version": "[6.0.2, )",
               "generatePathProperty": true
             }
           },
@@ -49,12 +50,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.14, 5.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
