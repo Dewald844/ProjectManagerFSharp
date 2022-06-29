@@ -52,3 +52,30 @@ C:\Users\User\DewaldProjects\ProjectManagerFSharp\obj\Debug\net5.0\ProjectManage
 C:\Users\User\DewaldProjects\ProjectManagerFSharp\obj\Debug\net5.0\ProjectManagerFSharp.dll
 C:\Users\User\DewaldProjects\ProjectManagerFSharp\obj\Debug\net5.0\ProjectManagerFSharp.pdb
 C:\Users\User\DewaldProjects\ProjectManagerFSharp\obj\Debug\net5.0\ProjectManagerFSharp.genruntimeconfig.cache
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\ProjectManagerFSharp.exe
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\ProjectManagerFSharp.deps.json
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\ProjectManagerFSharp.runtimeconfig.json
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\ProjectManagerFSharp.runtimeconfig.dev.json
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\ProjectManagerFSharp.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\ProjectManagerFSharp.pdb
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\FSharp.Core.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\cs\FSharp.Core.resources.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\de\FSharp.Core.resources.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\es\FSharp.Core.resources.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\fr\FSharp.Core.resources.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\it\FSharp.Core.resources.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\ja\FSharp.Core.resources.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\ko\FSharp.Core.resources.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\pl\FSharp.Core.resources.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\pt-BR\FSharp.Core.resources.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\ru\FSharp.Core.resources.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\tr\FSharp.Core.resources.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\zh-Hans\FSharp.Core.resources.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\bin\Debug\net5.0\zh-Hant\FSharp.Core.resources.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\obj\Debug\net5.0\ProjectManagerFSharp.fsproj.AssemblyReference.cache
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\obj\Debug\net5.0\ProjectManagerFSharp.AssemblyInfoInputs.cache
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\obj\Debug\net5.0\ProjectManagerFSharp.AssemblyInfo.fs
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\obj\Debug\net5.0\ProjectManagerFSharp.fsproj.CopyComplete
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\obj\Debug\net5.0\ProjectManagerFSharp.dll
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\obj\Debug\net5.0\ProjectManagerFSharp.pdb
+C:\Users\Dewald Haasbroek\TailwindSafeStack\ProjectManagerFSharp\obj\Debug\net5.0\ProjectManagerFSharp.genruntimeconfig.cache
