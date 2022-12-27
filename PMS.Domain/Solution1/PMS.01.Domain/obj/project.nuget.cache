@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DRLmFI93A2ZTa+46V2PcQzor6TsDeg+qYEd/XumEuwDWITpTXP9qBGNeotP02BiTze/TJmWseqw5umhL5lY3iQ==",
+  "dgSpecHash": "KSFfUiO1w5hFK0xwf3TcKX/hh4h2RGEqXgWC7upyLE8zDYn5E/EutCeC3ReNp4LmBH5q/XgrHxw1VhSR2lteIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\DewaldProjects\\ProjectManagerFSharp\\PMS.Domain\\Solution1\\PMS.01.Domain\\PMS.01.Domain.fsproj",
+  "projectFilePath": "/Users/dewaldhaasbroek/Documents/GitHub/ProjectManagerFSharp/PMS.Domain/Solution1/PMS.01.Domain/PMS.01.Domain.fsproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512"
+    "/Users/dewaldhaasbroek/.nuget/packages/fsharp.core/6.0.5/fsharp.core.6.0.5.nupkg.sha512"
   ],
   "logs": []
 }
