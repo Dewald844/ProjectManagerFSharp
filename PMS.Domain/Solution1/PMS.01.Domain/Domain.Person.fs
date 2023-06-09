@@ -5,6 +5,8 @@ open Types.Helpers
 
 module Person =
 
+  type PersonId = PersonId of Int99
+
   type EmailAddress = Email of string
 
   type PersonType =
@@ -19,7 +21,7 @@ module Person =
   }
 
   type PersonDetails ={
-    PersonId       : Int99
+    PersonId       : PersonId
     Name           : FirstName * LastName
     ContactDetails : ContactDetails
     PersonType     : PersonType

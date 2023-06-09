@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "DRLmFI93A2ZTa+46V2PcQzor6TsDeg+qYEd/XumEuwDWITpTXP9qBGNeotP02BiTze/TJmWseqw5umhL5lY3iQ==",
+  "dgSpecHash": "f0lR3tQaPjFeCdJxwRIg2nayCwlQXPchtVpAL5zhlX3n9TEYYLyWa4SU2XS9RqrKmjiamlGnGCfHm2xPOAYmvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\DewaldProjects\\ProjectManagerFSharp\\PMS.Domain\\Solution1\\PMS.01.Domain\\PMS.01.Domain.fsproj",
+  "projectFilePath": "/Users/dewaldhaasbroek/Code/ProjectManagerFSharp/PMS.Domain/Solution1/PMS.01.Domain/PMS.01.Domain.fsproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512"
+    "/Users/dewaldhaasbroek/.nuget/packages/fsharp.core/6.0.7/fsharp.core.6.0.7.nupkg.sha512",
+    "/Users/dewaldhaasbroek/.nuget/packages/microsoft.netcore.app.ref/5.0.0/microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "/Users/dewaldhaasbroek/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "/Users/dewaldhaasbroek/.nuget/packages/microsoft.netcore.app.host.osx-x64/5.0.17/microsoft.netcore.app.host.osx-x64.5.0.17.nupkg.sha512"
   ],
   "logs": []
 }

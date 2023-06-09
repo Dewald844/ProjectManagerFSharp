@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\DewaldProjects\\ProjectManagerFSharp\\PMS.Domain\\Solution1\\PMS.01.Domain\\PMS.01.Domain.fsproj": {}
+    "/Users/dewaldhaasbroek/Code/ProjectManagerFSharp/PMS.Domain/Solution1/PMS.01.Domain/PMS.01.Domain.fsproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\DewaldProjects\\ProjectManagerFSharp\\PMS.Domain\\Solution1\\PMS.01.Domain\\PMS.01.Domain.fsproj": {
+    "/Users/dewaldhaasbroek/Code/ProjectManagerFSharp/PMS.Domain/Solution1/PMS.01.Domain/PMS.01.Domain.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\DewaldProjects\\ProjectManagerFSharp\\PMS.Domain\\Solution1\\PMS.01.Domain\\PMS.01.Domain.fsproj",
+        "projectUniqueName": "/Users/dewaldhaasbroek/Code/ProjectManagerFSharp/PMS.Domain/Solution1/PMS.01.Domain/PMS.01.Domain.fsproj",
         "projectName": "PMS.01.Domain",
-        "projectPath": "C:\\Users\\User\\DewaldProjects\\ProjectManagerFSharp\\PMS.Domain\\Solution1\\PMS.01.Domain\\PMS.01.Domain.fsproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\DewaldProjects\\ProjectManagerFSharp\\PMS.Domain\\Solution1\\PMS.01.Domain\\obj\\",
+        "projectPath": "/Users/dewaldhaasbroek/Code/ProjectManagerFSharp/PMS.Domain/Solution1/PMS.01.Domain/PMS.01.Domain.fsproj",
+        "packagesPath": "/Users/dewaldhaasbroek/.nuget/packages/",
+        "outputPath": "/Users/dewaldhaasbroek/Code/ProjectManagerFSharp/PMS.Domain/Solution1/PMS.01.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/dewaldhaasbroek/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "/usr/local/share/dotnet/sdk/6.0.408/FSharp/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -36,7 +38,7 @@
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[5.0.0, )",
+              "version": "[6.0.7, )",
               "generatePathProperty": true
             }
           },
@@ -46,16 +48,31 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[5.0.17, 5.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
         }
       }
     }

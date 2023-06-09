@@ -8,7 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Program.fs" />
+        <Compile Include="Controller.Person.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PMS.01.Domain\PMS.01.Domain.fsproj" />
     </ItemGroup>
 
 </Project>
