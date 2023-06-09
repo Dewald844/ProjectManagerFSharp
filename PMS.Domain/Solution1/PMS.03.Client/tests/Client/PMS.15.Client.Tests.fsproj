@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>Client.Tests</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="Client.Tests.fs" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\PMS.05.Client\PMS.05.Client.fsproj" />
+        <ProjectReference Include="..\Shared\PMS.13.Shared.Tests.fsproj" />
+    </ItemGroup>
+    <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>
